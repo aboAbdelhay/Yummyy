@@ -1,1 +1,1 @@
-Demo: https://aboabdelhay.github.io/Yummyy/
+Demo: https://aboabdelhay.github.io/yummy/
