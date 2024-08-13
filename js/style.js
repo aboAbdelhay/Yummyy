@@ -91,7 +91,6 @@ async function displaySearchByName(name) {
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
   );
   let data = await api.json();
-  console.log("done");
   data.meals ? displayMeals(data.meals) : $(".row").html(" ");
   closeNavbar();
   $(".loading").fadeOut(300, function () {
@@ -258,7 +257,7 @@ function displayCategories(arr) {
   }
   $(".box-catagories").on("click", function () {
     categoriesMealsFun($(this).attr("date_name"));
-    console.log($(this).attr("date_name"));
+    $(this).attr("date_name");
   });
 }
 function displayArea(arr) {
@@ -383,6 +382,7 @@ function displayDetails(arr) {
 `;
 
   $(".row").html(" ");
+  $(".row-search").html(" ");
   $(".row-details").html(carton);
 }
 // !contact us
